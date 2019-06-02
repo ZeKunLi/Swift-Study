@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="ARM" customModuleProvider="target">
+            <connections>
+                <outlet property="moviePlay" destination="gP4-0e-t8L" id="tTE-XY-R9f"/>
+                <outlet property="play" destination="hCB-C6-qmC" id="7Cq-p7-nSJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PLholder" translatesAutoresizingMaskIntoConstraints="NO" id="gP4-0e-t8L">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="187.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="gP4-0e-t8L" secondAttribute="height" multiplier="1:1" id="2Fm-hz-7Es"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PLholder" translatesAutoresizingMaskIntoConstraints="NO" id="Gub-Yh-5NV">
+                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="187.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Gub-Yh-5NV" secondAttribute="height" multiplier="1:1" id="XlL-8Z-wFS"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PLholder" translatesAutoresizingMaskIntoConstraints="NO" id="ykG-Lc-Kbw">
+                    <rect key="frame" x="187.5" y="187.5" width="187.5" height="187.5"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PLholder" translatesAutoresizingMaskIntoConstraints="NO" id="Edl-lj-eNq">
+                    <rect key="frame" x="0.0" y="187.5" width="187.5" height="187.5"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCB-C6-qmC">
+                    <rect key="frame" x="172" y="458" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Play"/>
+                    <connections>
+                        <action selector="playClick:" destination="-1" eventType="touchUpInside" id="nr2-8h-dkH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC3-3F-n4b">
+                    <rect key="frame" x="172" y="541" width="31" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="返回"/>
+                    <connections>
+                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="9bR-Sz-KAm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ykG-Lc-Kbw" firstAttribute="leading" secondItem="Edl-lj-eNq" secondAttribute="trailing" id="0Ot-To-lJ6"/>
+                <constraint firstItem="ykG-Lc-Kbw" firstAttribute="height" secondItem="gP4-0e-t8L" secondAttribute="height" id="2Ac-RM-ehe"/>
+                <constraint firstAttribute="trailing" secondItem="Gub-Yh-5NV" secondAttribute="trailing" id="2uJ-7P-cO5"/>
+                <constraint firstItem="ykG-Lc-Kbw" firstAttribute="width" secondItem="gP4-0e-t8L" secondAttribute="width" id="8Mv-m2-F5r"/>
+                <constraint firstItem="Edl-lj-eNq" firstAttribute="height" secondItem="gP4-0e-t8L" secondAttribute="height" id="CLQ-hV-5JR"/>
+                <constraint firstItem="Gub-Yh-5NV" firstAttribute="width" secondItem="gP4-0e-t8L" secondAttribute="width" id="Kc8-Bz-QNw"/>
+                <constraint firstItem="ykG-Lc-Kbw" firstAttribute="top" secondItem="Gub-Yh-5NV" secondAttribute="bottom" id="MXv-gy-HOo"/>
+                <constraint firstItem="Gub-Yh-5NV" firstAttribute="width" secondItem="gP4-0e-t8L" secondAttribute="width" id="MrF-54-Xwa"/>
+                <constraint firstItem="gP4-0e-t8L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NCB-Np-ElM"/>
+                <constraint firstItem="Gub-Yh-5NV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TDT-Mv-kF8"/>
+                <constraint firstItem="gP4-0e-t8L" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Usm-wA-z9F"/>
+                <constraint firstItem="Gub-Yh-5NV" firstAttribute="leading" secondItem="gP4-0e-t8L" secondAttribute="trailing" id="bnD-fN-NeU"/>
+                <constraint firstItem="Edl-lj-eNq" firstAttribute="top" secondItem="gP4-0e-t8L" secondAttribute="bottom" id="ecN-Ci-lto"/>
+                <constraint firstAttribute="trailing" secondItem="ykG-Lc-Kbw" secondAttribute="trailing" id="pmY-Vn-9TG"/>
+                <constraint firstItem="Edl-lj-eNq" firstAttribute="width" secondItem="gP4-0e-t8L" secondAttribute="width" id="wa5-WR-1bb"/>
+                <constraint firstItem="Edl-lj-eNq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xVP-6R-ijZ"/>
+                <constraint firstItem="Gub-Yh-5NV" firstAttribute="height" secondItem="gP4-0e-t8L" secondAttribute="height" id="zex-z5-9D9"/>
+            </constraints>
+            <point key="canvasLocation" x="32.5" y="74.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="PLholder" width="2560" height="1600"/>
+    </resources>
+</document>
