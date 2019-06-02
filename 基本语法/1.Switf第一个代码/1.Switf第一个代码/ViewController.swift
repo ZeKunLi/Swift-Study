@@ -44,8 +44,10 @@ class ViewController: UIViewController {
         
     }
     
-    
-     func buttonClick(sender: UIButton) -> Void {
+    // Argument of '#selector' refers to instance method 'buttonClick(sender:)' that is not exposed to Objective-C
+    // Add '@objc' to expose this instance method to Objective-C
+    // 方法暴露给 OC 类必须在方法前声明@objc
+    @objc func buttonClick(sender: UIButton) -> Void {
         print(sender)
         print("Hello Swift4")
     }
