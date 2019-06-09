@@ -15,13 +15,17 @@ class ViewController: UIViewController {
         
         demo()
         demo1()
+        option()
+        
     }
     func demo1 () {
-        // ** let 常亮可选项没有默认值
+        // ** let 常量可选项没有默认值
         // ** var 变量可选项有默认值 默认值为 Nil
         let x:Int?
         
+        
         x = 20
+        
         print(x!)
         
         var y:Int?
@@ -29,6 +33,54 @@ class ViewController: UIViewController {
         print(y)
         
         
+        
+        
+    }
+    
+    func option() {
+        var optionalInteger : Int?
+        var optionalInterger :Optional<Int>
+        
+        optionalInteger = 42
+        print(optionalInteger!)
+        
+        
+        var optionArray : ([Int])?
+        
+        var string :String?
+        
+        if string != nil {
+            print(string)
+        } else {
+            print("字符串为空")
+        }
+        
+//        var myString:String!
+//
+//        myString = "Hello, Swift!"
+//
+//        if myString != nil {
+//            print(myString)
+//        }else{
+//            print("myString 值为 nil")
+//        }
+    
+        
+        var myString :String?
+        
+        
+        myString  = "Hello Swift.";
+        
+        
+        if let yourString = myString {
+            print("你的字符串值为\(yourString)")
+        } else {
+            print("你的字符串没有值")
+        }
+        
+        
+        
+
         
         
     }
