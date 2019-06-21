@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         show(age: 18)
         show(height: 188.88)
         show(para: 88.88)
-        testForShow(name: 123, object: 123)
+        testForShow(name: "fewf", object: 123)
         
     }
     
