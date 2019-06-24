@@ -13,7 +13,63 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // String 是一个结构体，性能更高,String 支持遍历
-        demo5 ()
+        
+        
+        
+        
+        
+        initString()
+    }
+    
+    func forinString() {
+        for character in "Dog!🐶" {
+            print(character)
+        }
+    }
+    
+    func initString() {
+        var emptyString = ""              // 空字符串变量
+        var anotherEmptyString = String() // 初始化方法
+        
+        if emptyString.isEmpty {
+            print("Nothing to see here")
+        }
+        
+        
+    }
+    
+    func quotationString() {
+        let quotation = """
+
+
+
+        The White Rabbit put on his spectacles.  "Where shall I begin,\
+        please your Majesty?" he asked.\
+
+        "Begin at the beginning," the King said gravely, "and go on\
+        till you come to the end; then stop.\"
+        \0(空字符)、\\(反斜线)、\t(水平制表符)、\n(换行符)、\r(回车符)、\"(双引号)、\'(单引号)
+        """
+        
+        print(quotation)
+        
+        let wiseWords = "\"Imagination is more important than knowledge\" - Einstein"
+        // "Imageination is more important than knowledge" - Enistein
+        let dollarSign = "\u{24}"             // $, Unicode 标量 U+0024
+        let blackHeart = "\u{2665}"           // ♥, Unicode 标量 U+2665
+        let sparklingHeart = "\u{1F496}"      // 💖, Unicode 标量 U+1F496
+    }
+    
+    func variableString() {
+        var variableString = "LiZeKun"
+        variableString += " Coding"
+        // variableString 现在为"LiZeKun Coding"
+        
+        var constantString = "Swift"
+        constantString += "OC"
+        // 在 Objective-C 和 Cocoa 中，您需要通过选择两个不同的类(NSString和NSMutableString)来指定字符串是否可以被修改。
+        
+        
     }
     // MARK:遍历字符串
     func demo () {
@@ -21,7 +77,7 @@ class ViewController: UIViewController {
         // NSString 不支持遍历
         let str:String  = "我要飞得更高"
         
-        for c in str.characters {
+        for c in str {
             print(c)
         }
         
@@ -34,7 +90,7 @@ class ViewController: UIViewController {
         // UTF-8 的编码0-4个字节 ,每个汉字是3个字节
         print(str.lengthOfBytes(using: .utf32))
         // 字符串长度 - 返回字符的个数
-        print(str.characters.count)
+        print(str.count)
         // 使用 NSString 中转
         // as 是做类型转换的 as(作为)
         let ocString = str as NSString
