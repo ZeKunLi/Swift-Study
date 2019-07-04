@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         
         
-        initString()
+        insertString()
     }
     
     func forinString() {
@@ -36,6 +36,12 @@ class ViewController: UIViewController {
         }
         
         
+    }
+    
+    func insertString() {
+        let multiplier = 3
+        let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5) "
+        print(message)
     }
     
     func quotationString() {
@@ -58,6 +64,8 @@ class ViewController: UIViewController {
         let dollarSign = "\u{24}"             // $, Unicode 标量 U+0024
         let blackHeart = "\u{2665}"           // ♥, Unicode 标量 U+2665
         let sparklingHeart = "\u{1F496}"      // 💖, Unicode 标量 U+1F496
+        let add = "\u{2b}"
+        print(add)
     }
     
     func variableString() {
