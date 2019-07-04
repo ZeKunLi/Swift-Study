@@ -16,9 +16,11 @@ class ViewController: UIViewController {
         
         
         
+        let name = ["","",""]
         
         
         insertString()
+
     }
     
     func forinString() {
@@ -30,10 +32,14 @@ class ViewController: UIViewController {
     func initString() {
         var emptyString = ""              // 空字符串变量
         var anotherEmptyString = String() // 初始化方法
-        
+        let precomposed: Character = "\u{D55C}" // 한
+        let decomposed: Character = "\u{1112}\u{1161}" // ᄒ, ᅡ, ᆫ
+        print(precomposed)
+        print(decomposed)
         if emptyString.isEmpty {
             print("Nothing to see here")
         }
+        
         
         
     }
@@ -79,6 +85,38 @@ class ViewController: UIViewController {
         
         
     }
+    
+    func indexString() {
+        let greeting = "Guten Tag!"
+        greeting[greeting.startIndex]
+        // G
+        greeting[greeting.index(before: greeting.endIndex)]
+        // !
+        greeting[greeting.index(after: greeting.startIndex)]
+        // u
+        let index = greeting.index(greeting.startIndex, offsetBy: 7)
+        greeting[index]
+        
+        print(greeting[index])
+        
+        for index in greeting.indices {
+            print("\(greeting[index]) ", terminator: "")
+            print("\(greeting[index]) ")
+            
+        }
+    }
+    
+    func insertRemoveString() {
+        var welcome = "hello"
+        welcome.insert("!", at: welcome.endIndex)
+        // welcome now equals "hello!"
+
+        welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex))
+        
+        
+        
+    }
+    
     // MARK:遍历字符串
     func demo () {
         
